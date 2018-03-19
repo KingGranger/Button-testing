@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 const ClickedPage = () => {
 
   return (
-    <div>
-    You have clicked the button
+    <div className='Clicked'>
+      <div className='ClickedText'>
+        You have entered the Suite Luxury Lottery! Good luck!
+      </div>
     </div>
   )
 }

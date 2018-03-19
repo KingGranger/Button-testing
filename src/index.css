@@ -2,10 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
 }
 .Home {
   text-align: center;
-  padding: 10px
+  padding: 10px;
+  background: white;
 }
 
 .Button {
@@ -15,4 +17,26 @@ body {
 
 .Info {
   padding: 50px;
+}
+
+.Clicked {
+  height: 100vh;
+  position: relative;
+  background: url('./img/msg_suite_bkg.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.ClickedText {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  border: 2px blue;
+  background: white;
+  text-align: center;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
 }
