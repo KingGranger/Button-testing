@@ -12,7 +12,6 @@ class App extends Component {
     this.setState({buttonHasBeenClicked: !this.state.buttonHasBeenClicked})
   }
   render() {
-    console.log(this.state)
     return (
       <div className="App">
         {!this.state.buttonHasBeenClicked ? <Home handleClick={this.handleClick}/> : <ClickedPage />}
