@@ -5,7 +5,7 @@ const ClickedPage = () => {
   return (
     <div className='Clicked'>
       <div className='ClickedText'>
-        You have entered the Suite Luxury Lottery! Good luck!
+        You have entered the Suite Luxury Lottery! <br/> <br /> Good luck!
       </div>
     </div>
   )

@@ -3,25 +3,35 @@ import { Button } from 'semantic-ui-react';
 import SuiteInfo from './SuitesInfo';
 import Garden from '../img/garden.png';
 import Suite from '../img/suitePhoto.png';
+import EnterButton from './EnterButton';
 
-const Home = ({ handleClick }) => {
+class Home extends Component {
+  state = {
+    showForm: false
+  }
 
-  return (
-    <div>
-      <div className='topPic'>
-        <img src={Garden} style={{ width: `100%` }} alt='Garden'/>
+  openForm = () => {
+    this.setState({showForm: !this.state.showForm})
+  }
+
+  render(){
+    console.log(this.state.showForm)
+      return (
+      <div>
+        <div className='topPic'>
+          <img src={Garden} style={{ width: `100%` }} alt='Garden'/>
+        </div>
+        <div className='Home'>
+          <SuiteInfo />
+
+          <EnterButton showForm={this.state.showForm} openForm={this.openForm} handleSubmit={this.props.handleClick}/>
+        </div>
+        <div className='bottomPic'>
+          <img src={Suite} style={{ width: `100%`}} alt='Suite' />
+        </div>
       </div>
-      <div className='Home'>
-        <SuiteInfo />
-        <Button color='green' className='Button' onClick={()=> handleClick()}>
-          Click me!
-        </Button>
-      </div>
-      <div className='bottomPic'>
-        <img src={Suite} style={{ width: `100%`}} alt='Suite' />
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default Home
