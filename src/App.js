@@ -7,14 +7,14 @@ class App extends Component {
   state = {
     buttonHasBeenClicked: false
   }
-  
-  handleClick = () => {
+
+  handleSubmit = () => {
     this.setState({buttonHasBeenClicked: !this.state.buttonHasBeenClicked})
   }
   render() {
     return (
       <div className="App">
-        {!this.state.buttonHasBeenClicked ? <Home handleClick={this.handleClick}/> : <ClickedPage />}
+        {!this.state.buttonHasBeenClicked ? <Home handleSubmit={this.handleSubmit}/> : <ClickedPage />}
       </div>
     );
   }
