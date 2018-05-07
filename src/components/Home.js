@@ -24,8 +24,8 @@ class Home extends Component {
         </div>
         <div className='Home'>
           <SuiteInfo />
-          <ContestantForm handleSubmit={this.props.handleSubmit}/>
-          <EnterButton showForm={this.state.showForm} openForm={this.openForm}/>
+          {this.state.showForm ? <ContestantForm handleSubmit={this.props.handleSubmit}/> : null}
+          {!this.state.showForm ? <EnterButton showForm={this.state.showForm} openForm={this.openForm}/> : null}
         </div>
         <div className='bottomPic'>
           <img src={Suite} style={{ width: `100%`}} alt='Suite' />
