@@ -16,7 +16,7 @@ class Home extends Component {
   }
 
   render(){
-    console.log(this.state.showForm)
+    //console.log(this.state.showForm)
       return (
       <div>
         <div className='topPic'>

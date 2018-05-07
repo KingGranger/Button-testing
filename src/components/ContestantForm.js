@@ -15,9 +15,13 @@ class ContestantForm extends Component{
     this.setState({termsOfAgreement: true})
   }
 
+  setFalse = () => {
+    this.setState({termsOfAgreement: false})
+  }
+
   render(){
     return (
-      <form>
+      <form onSubmit={this.props.handleSubmit}>
         <label>First Name: </label>
         <input type='text' name='firstName' value={this.state.firstName} onChange={this.handleChange}/>
         <br/>
@@ -26,6 +30,16 @@ class ContestantForm extends Component{
         <br/>
         <label>Phone Number: </label>
         <input type='text' name='phoneNumber' value={this.state.phoneNumber} onChange={this.handleChange}/>
+        <br/>
+        <label>Acceptance of Terms of Agreement: </label>
+        <div className='TOA'>
+          Lorem ipsum agreement stuff
+        </div>
+        <input type='radio' name='termsOfAgreement' value='agree' onClick={this.setTrue}/>Agree <br/>
+
+        <input type='radio' name='termsOfAgreement' value='disagree' onClick={this.setFalse}/>Disagree
+        <br/>
+        <Button type='submit' color='green'>Enter Contest</Button>
       </form>
     )
   }
