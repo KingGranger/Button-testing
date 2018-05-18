@@ -16,7 +16,7 @@ class Home extends Component {
   }
 
   render(){
-    //console.log(this.state.showForm)
+    console.log(this.props)
       return (
       <div>
         <div className='topPic'>
@@ -25,7 +25,7 @@ class Home extends Component {
         <div className='Home'>
           <SuiteInfo />
           {this.state.showForm ? <ContestantForm handleSubmit={this.props.handleSubmit}/> : null}
-          {!this.state.showForm ? <EnterButton showForm={this.state.showForm} openForm={this.openForm}/> : null}
+          {!this.state.showForm ? <EnterButton openForm={this.openForm}/> : null}
         </div>
         <div className='bottomPic'>
           <img src={Suite} style={{ width: `100%`}} alt='Suite' />
