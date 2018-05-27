@@ -21,7 +21,7 @@ class ContestantForm extends Component{
   }
 
   render(){
-    const {firstName, lastName, phoneNumer, termsOfAgreement} = this.state
+    const {firstName, lastName, phoneNumber, termsOfAgreement} = this.state
     console.log('form props',this.props)
     return (
       <div>
@@ -43,7 +43,7 @@ class ContestantForm extends Component{
 
         <input type='radio' name='termsOfAgreement' value='disagree' onClick={this.setFalse}/>Disagree
         <br/>
-        <Button type='submit' color='green' onClick={()=>this.props.handleSubmit(firstName, lastName, phoneNumer, termsOfAgreement)}>Enter Contest</Button>
+        <Button type='submit' color='green' onClick={()=>this.props.handleSubmit(firstName, lastName, phoneNumber, termsOfAgreement)}>Enter Contest</Button>
       </form>
       </div>
     )

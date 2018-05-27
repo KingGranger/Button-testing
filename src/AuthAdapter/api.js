@@ -6,6 +6,7 @@ const headers = {
 }
 
 const enterContestant = (first_name, last_name, phone_number, terms_of_agreement) => {
+  
   const newContestant = {
     method: 'POST',
     headers: headers,
